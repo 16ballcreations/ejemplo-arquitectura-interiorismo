@@ -1,0 +1,67 @@
+/* Lumbre Arquitectura e Interiorismo (marca ficticia, sitio de ejemplo): tokens de marca (ver ../../MARCA.md) */
+
+/* Inter Tight 200/300/400 se carga con un <link> en el <head> de cada página */
+
+:root {
+  /* Color */
+  --noche: #090900;
+  --grafito: #373638;
+  --nogal: #544639;
+  --travertino: #D7B399;
+  --piedra: #E3E2DD;
+  --cielo: #A1B6D3;
+
+  /* Tipografía */
+  --familia: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --display: clamp(3.5rem, 9vw, 10rem);   /* voz grande */
+  --titular: clamp(2.25rem, 5vw, 5rem);
+  --texto: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --etiqueta: 0.75rem;                    /* voz pequeña */
+
+  /* Retícula */
+  --ancho: 1440px;
+  --margen: clamp(16px, 4vw, 64px);
+  --canal: clamp(16px, 2vw, 32px);
+  --seccion: clamp(96px, 14vw, 220px);
+
+  /* Línea de luz */
+  --luz: var(--travertino);
+  --luz-brillo: 0 0 12px rgb(215 179 153 / 0.55), 0 0 2px rgb(215 179 153 / 0.9);
+  --luz-tiempo: 1.4s;
+  --luz-curva: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.display {
+  font: 300 var(--display) / 0.95 var(--familia);
+  letter-spacing: -0.02em;
+}
+
+.titular {
+  font: 300 var(--titular) / 1 var(--familia);
+  letter-spacing: -0.015em;
+}
+
+.etiqueta {
+  font: 200 var(--etiqueta) / 1.4 var(--familia);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* La línea de luz: se enciende de izquierda a derecha cuando recibe .encendida */
+.luz {
+  display: block;
+  height: 1px;
+  background: var(--luz);
+  box-shadow: var(--luz-brillo);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--luz-tiempo) var(--luz-curva);
+}
+
+.luz.encendida {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luz { transform: none; transition: none; }
+}

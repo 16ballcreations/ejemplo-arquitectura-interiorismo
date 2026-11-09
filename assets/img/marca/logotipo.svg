@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="Lumbre Arquitectura e Interiorismo (marca ficticia)">
+  <defs>
+    <filter id="brillo" x="-5%" y="-400%" width="110%" height="900%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Logotipo sobre la noche. Marca ficticia del sitio de ejemplo de 16 Ball Creations. -->
+  <text x="316" y="62" text-anchor="middle" fill="#E3E2DD"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="300"
+        font-size="52" letter-spacing="32">LUMBRE</text>
+  <rect x="60" y="84" width="480" height="1" fill="#D7B399" filter="url(#brillo)"/>
+  <text x="302.1" y="114" text-anchor="middle" fill="#E3E2DD" fill-opacity="0.8"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="200"
+        font-size="15" letter-spacing="4.2">ARQUITECTURA E INTERIORISMO</text>
+</svg>

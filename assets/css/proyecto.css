@@ -1,0 +1,151 @@
+/* Lumbre (sitio de ejemplo): página de detalle de un proyecto. Usa marca.css y sitio.css. */
+
+/* 1. Portada del proyecto */
+.obra-portada {
+  position: relative;
+  min-height: 100svh;
+  display: grid; align-items: end;
+  overflow: hidden;
+}
+.obra-portada-foto {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 45%;
+  transform: scale(calc(1.04 - var(--p, 0) * 0.04));
+  transition: transform 1.6s var(--luz-curva);
+}
+.obra-portada-velo {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgb(9 9 0 / 0.6) 0%, transparent 24%),
+    linear-gradient(0deg, var(--noche) 0%, rgb(9 9 0 / 0.75) 30%, transparent 62%);
+}
+.obra-portada-texto { position: relative; padding-bottom: calc(clamp(32px, 6vh, 64px) + 40px); row-gap: 18px; }
+.obra-portada-texto > * { grid-column: 1 / -1; }
+.obra-ruta { color: var(--travertino); }
+.obra-ruta a:hover { color: var(--piedra); }
+.obra-bajada { font-size: clamp(1.15rem, 1.8vw, 1.6rem); max-width: 34ch; opacity: 0.85; }
+.obra-ficha-corta {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--canal);
+  margin-top: clamp(20px, 4vh, 40px);
+  padding-top: 20px;
+  border-top: 1px solid rgb(227 226 221 / 0.25);
+}
+.obra-ficha-corta div { display: grid; gap: 8px; }
+.obra-ficha-corta dt { color: var(--travertino); }
+.obra-ficha-corta dd { font-size: clamp(1rem, 1.3vw, 1.2rem); }
+
+/* 2. El proyecto */
+.obra-intro { padding: var(--seccion) 0; }
+.obra-frase {
+  grid-column: 1 / 8;
+  font-size: clamp(1.75rem, 3.2vw, 3rem); line-height: 1.18; letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+.obra-ficha { grid-column: 9 / -1; display: grid; align-content: start; }
+.obra-ficha div {
+  display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; align-items: baseline;
+  padding: 14px 0; border-bottom: 1px solid rgb(9 9 0 / 0.15);
+}
+.obra-ficha div:first-child { border-top: 1px solid rgb(9 9 0 / 0.15); }
+.obra-ficha dd { font-size: 16px; }
+
+/* 3. Recorrido: capítulos que alternan foto y texto */
+.obra-recorrido { padding: var(--seccion) 0 0; }
+.obra-recorrido-final { padding: var(--seccion) 0; }
+.capitulo { align-items: end; row-gap: var(--canal); margin-bottom: clamp(80px, 11vw, 168px); }
+.capitulo:last-child { margin-bottom: 0; }
+.capitulo-foto { grid-column: 1 / 8; overflow: hidden; background: var(--grafito); }
+.capitulo-foto img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.capitulo-texto { grid-column: 9 / -1; display: grid; gap: 18px; padding-bottom: 8px; }
+.capitulo-texto .etiqueta { color: var(--travertino); }
+.capitulo-texto > p:last-child { opacity: 0.75; max-width: 40ch; }
+.capitulo-invertido .capitulo-foto { grid-column: 6 / -1; grid-row: 1; }
+.capitulo-invertido .capitulo-texto { grid-column: 1 / 5; grid-row: 1; }
+/* la doble altura: una foto grande, el detalle pequeño encima y el texto debajo */
+.capitulo-par .capitulo-foto:first-child { grid-column: 1 / 9; grid-row: 1 / 3; }
+.capitulo-par .capitulo-detalle { grid-column: 9 / -1; grid-row: 1; align-self: start; }
+.capitulo-par .capitulo-texto { grid-column: 9 / -1; grid-row: 2; }
+
+/* 4. El detalle, a sangre */
+.obra-detalle { position: relative; min-height: 110svh; display: grid; align-items: end; overflow: hidden; }
+.obra-detalle-foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.obra-detalle-velo { position: absolute; inset: 0; background: linear-gradient(0deg, var(--noche) 0%, rgb(9 9 0 / 0.55) 40%, rgb(9 9 0 / 0.2) 100%); }
+.obra-detalle-texto { position: relative; padding-bottom: clamp(48px, 10vh, 120px); row-gap: 18px; }
+.obra-detalle-texto > * { grid-column: 1 / 10; }
+.obra-detalle-texto .etiqueta { color: var(--travertino); }
+.obra-detalle-frase { font-size: clamp(2rem, 4.6vw, 4.5rem); line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
+
+/* 5. Galería */
+.obra-galeria { padding: var(--seccion) 0; }
+.galeria { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--canal); }
+.galeria button { display: block; width: 100%; padding: 0; border: 0; background: var(--grafito); cursor: zoom-in; overflow: hidden; }
+.galeria img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 1.2s var(--luz-curva), filter 1.2s var(--luz-curva); filter: brightness(0.9); }
+.galeria button:hover img { transform: scale(1.05); filter: brightness(1); }
+.galeria li:nth-child(1), .galeria li:nth-child(4) { grid-column: span 2; grid-row: span 2; }
+
+.visor {
+  width: 100vw; height: 100svh; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  background: rgb(9 9 0 / 0.96); color: var(--piedra);
+}
+.visor[open] { display: grid; place-items: center; }
+.visor::backdrop { background: rgb(9 9 0 / 0.9); }
+.visor img { max-width: min(92vw, 1200px); max-height: 82svh; object-fit: contain; }
+.visor-pie { position: absolute; left: var(--margen); bottom: 24px; color: var(--travertino); }
+.visor-cerrar {
+  position: absolute; top: 20px; right: var(--margen);
+  background: none; border: 1px solid rgb(227 226 221 / 0.35); color: var(--piedra);
+  padding: 10px 16px; cursor: pointer;
+}
+.visor-cerrar:hover { border-color: var(--travertino); color: var(--travertino); }
+.visor-anterior { left: var(--margen); }
+.visor-siguiente { right: var(--margen); }
+
+/* 6. Cierre */
+.obra-cierre { padding: var(--seccion) 0; }
+.obra-cierre-frase { grid-column: 2 / 12; text-align: center; }
+.obra-cierre-frase p { font-size: clamp(2rem, 5vw, 4.75rem); font-weight: 200; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
+
+/* 7. Siguiente proyecto */
+.obra-siguiente { position: relative; display: grid; align-items: end; min-height: 70svh; overflow: hidden; }
+.obra-siguiente img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--luz-curva); }
+.obra-siguiente:hover img { transform: scale(1.04); }
+.obra-siguiente-velo { position: absolute; inset: 0; background: linear-gradient(0deg, rgb(9 9 0 / 0.85) 0%, rgb(9 9 0 / 0.35) 60%, rgb(9 9 0 / 0.2) 100%); }
+.obra-siguiente-texto { position: relative; padding-bottom: clamp(40px, 8vh, 88px); row-gap: 14px; }
+.obra-siguiente-texto > * { grid-column: 1 / -1; }
+.obra-siguiente-texto .etiqueta { color: var(--travertino); }
+.obra-siguiente-texto .titular { font-size: clamp(2.5rem, 7vw, 7rem); }
+
+/* 8. Cita */
+.obra-cita { padding: var(--seccion) 0; }
+.obra-cita-titulo { grid-column: 1 / -1; font-size: clamp(2.5rem, 6.5vw, 6.5rem); }
+.obra-cita-titulo span { display: block; }
+.obra-cita-acciones { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(40px, 6vw, 80px); }
+
+/* Tableta */
+@media (max-width: 1024px) {
+  .obra-ficha-corta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 20px; }
+  .obra-frase, .obra-ficha { grid-column: 1 / -1; }
+  .obra-ficha { margin-top: 48px; }
+  .galeria { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Teléfono */
+@media (max-width: 720px) {
+  .capitulo-foto, .capitulo-texto,
+  .capitulo-invertido .capitulo-foto, .capitulo-invertido .capitulo-texto,
+  .capitulo-par .capitulo-foto:first-child, .capitulo-par .capitulo-detalle, .capitulo-par .capitulo-texto {
+    grid-column: 1 / -1; grid-row: auto;
+  }
+  .capitulo-par .capitulo-detalle { display: none; }
+  .obra-detalle-texto > * { grid-column: 1 / -1; }
+  .obra-ficha div { grid-template-columns: 1fr; gap: 4px; }
+  .galeria { gap: 8px; }
+  .obra-cierre-frase { grid-column: 1 / -1; }
+  .obra-cita-acciones .boton { width: 100%; justify-content: space-between; }
+  .visor-anterior, .visor-siguiente { top: auto; bottom: 64px; margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .obra-portada-foto { transform: none; }
+}

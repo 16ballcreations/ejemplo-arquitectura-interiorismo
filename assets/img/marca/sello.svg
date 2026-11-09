@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lumbre">
+  <!-- Monograma L: un muro de piedra y, a sus pies, la línea de luz. Marca ficticia. -->
+  <defs>
+    <filter id="brillo" x="-20%" y="-300%" width="140%" height="700%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" fill="#090900"/>
+  <rect x="18" y="12" width="7" height="34" fill="#E3E2DD" fill-opacity="0.9"/>
+  <rect x="18" y="49" width="29" height="1.6" fill="#D7B399" filter="url(#brillo)"/>
+</svg>

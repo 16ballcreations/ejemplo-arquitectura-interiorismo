@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumbre Arquitectura e Interiorismo · Sitio de ejemplo</title>
+  <meta name="description" content="Sitio de ejemplo de 16 Ball Creations para un estudio de arquitectura e interiorismo. Lumbre es una marca ficticia: diseña, construye y amobla casas en Medellín y en todo el país.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://16ballcreations.github.io/ejemplo-arquitectura-interiorismo/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:url" content="https://16ballcreations.github.io/ejemplo-arquitectura-interiorismo/">
+  <meta property="og:title" content="Lumbre Arquitectura e Interiorismo (sitio de ejemplo)">
+  <meta property="og:description" content="Sitio de ejemplo de 16 Ball Creations: un estudio ficticio de arquitectura e interiorismo en Medellín.">
+  <meta property="og:image" content="https://16ballcreations.github.io/ejemplo-arquitectura-interiorismo/assets/img/web/hero-casa.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#090900">
+  <link rel="icon" href="assets/img/marca/sello.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/web/hero-casa.jpg" imagesrcset="assets/img/web/hero-casa-800.webp 800w, assets/img/web/hero-casa.webp 1400w" imagesizes="(max-width: 720px) 112vw, 100svh">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400&display=swap">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body>
+
+  <!-- 0. Carga: la línea de luz se enciende de 0 a 100 -->
+  <div class="carga" aria-hidden="true">
+    <span class="etiqueta carga-marca">Lumbre</span>
+    <span class="carga-linea"><span class="carga-luz"></span></span>
+    <span class="etiqueta carga-cifra">000</span>
+  </div>
+
+  <!-- Aviso: es un sitio de ejemplo -->
+  <p class="aviso-ejemplo etiqueta">Sitio de ejemplo<span class="aviso-extra"> · Marca ficticia</span> · Hecho por <a href="https://16ballcreations.com" target="_blank" rel="noopener">16 Ball Creations</a></p>
+
+  <!-- 1. Menú -->
+  <header class="menu">
+    <a class="menu-marca" href="#inicio" aria-label="Lumbre, inicio">
+      <span class="menu-logo">LUMBRE</span>
+    </a>
+    <nav class="menu-enlaces" aria-label="Secciones">
+      <a class="etiqueta" href="#proyectos">Proyectos</a>
+      <a class="etiqueta" href="#estudio">Estudio</a>
+      <a class="etiqueta" href="#servicios">Servicios</a>
+      <a class="etiqueta" href="#showroom">Showroom</a>
+    </nav>
+    <a class="menu-cita etiqueta" href="#cita"><span class="punto"></span>Agenda tu cita</a>
+    <button class="menu-abrir etiqueta" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
+  </header>
+
+  <nav class="menu-movil" id="menu-movil" aria-label="Secciones" hidden>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#estudio">Estudio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#showroom">Showroom</a>
+    <a href="#cita">Agenda tu cita</a>
+  </nav>
+
+  <main>
+
+    <!-- 2. Portada: la casa se enciende y el nombre se abre detrás de ella -->
+    <section class="portada" id="inicio">
+      <div class="portada-escena">
+        <div class="portada-casa">
+          <img class="portada-foto" src="assets/img/web/hero-casa.jpg" srcset="assets/img/web/hero-casa-800.webp 800w, assets/img/web/hero-casa.webp 1400w" sizes="(max-width: 720px) 112vw, 100svh" alt="Casa blanca de tres plantas con balcones de hierro, al anochecer" width="1400" height="1400">
+          <div class="portada-nombre" aria-hidden="true">
+            <span>L</span><span>U</span><span>M</span><span>B</span><span>R</span><span>E</span>
+          </div>
+          <!-- la misma foto, recortada a la silueta de la casa, tapa el nombre -->
+          <img class="portada-recorte" src="assets/img/web/hero-casa.jpg" srcset="assets/img/web/hero-casa-800.webp 800w, assets/img/web/hero-casa.webp 1400w" sizes="(max-width: 720px) 112vw, 100svh" alt="" width="1400" height="1400">
+        </div>
+        <div class="portada-velo"></div>
+        <div class="portada-texto">
+          <p class="etiqueta portada-dato">Arquitectura · Interiorismo · Mobiliario · Construcción</p>
+          <h1 class="display portada-titulo">
+            <span class="tenue">Casas que se encienden</span>
+            <span>al caer la tarde.</span>
+          </h1>
+          <div class="portada-pie">
+            <p>Diseñamos, construimos y amoblamos casas para vivirlas de día y de noche, en Medellín y en todo el país.</p>
+            <a class="boton" href="#cita"><span>Agenda tu cita</span><span class="boton-flecha" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <p class="etiqueta portada-leyenda">Casa Mirador · 3 plantas · 2025</p>
+      </div>
+    </section>
+
+    <!-- 3. El estudio -->
+    <section class="estudio claro" id="estudio">
+      <div class="reticula">
+        <div class="seccion-cabeza">
+          <span class="luz"></span>
+          <p class="etiqueta">01 — El estudio</p>
+        </div>
+        <p class="estudio-frase revelar">
+          Lumbre es un estudio de arquitectura e interiorismo. Diseñamos casas con luz propia:
+          claras de día, cálidas de noche y resueltas hasta el último detalle.
+        </p>
+        <p class="estudio-nota etiqueta revelar">Un solo equipo de principio a fin · Medellín · Desde 2012</p>
+        <a class="calificacion revelar" href="#clientes">
+          <span class="calificacion-cifra"><span data-contar="4.9" data-decimales="1">0,0</span><small>/5</small></span>
+          <span class="calificacion-texto">
+            <span class="calificacion-estrellas" aria-hidden="true">★★★★★</span>
+            <span class="etiqueta">Calificación de clientes · 24 reseñas</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. Servicios: cada uno compuesto como el logotipo (nombre, línea de luz, descriptor) -->
+    <section class="servicios claro" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="reticula">
+        <h2 class="solo-lector" id="servicios-titulo">Servicios</h2>
+        <ol class="servicios-lista">
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">01</span>
+            <h3>Diseño arquitectónico</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">Casas pensadas desde el lote</p>
+          </li>
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">02</span>
+            <h3>Interiorismo</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">Espacios para vivirlos, no solo para mirarlos</p>
+          </li>
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">03</span>
+            <h3>Mobiliario</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">Hecho a la medida de cada rincón</p>
+          </li>
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">04</span>
+            <h3>Construcción</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">Con un solo responsable de obra</p>
+          </li>
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">05</span>
+            <h3>Iluminación</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">La luz como un material más</p>
+          </li>
+          <li class="revelar">
+            <span class="etiqueta servicio-numero">06</span>
+            <h3>Gestión de proyectos</h3>
+            <span class="luz"></span>
+            <p class="etiqueta">Tiempos y presupuesto a la vista</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Fundadora | recorrido de una obra -->
+    <section class="fundador" aria-label="Fundadora y recorrido de una obra">
+      <div class="reticula fundador-reticula">
+        <figure class="fundador-retrato revelar">
+          <img src="assets/img/web/estudio-bocetos.jpg" srcset="assets/img/web/estudio-bocetos-800.webp 800w, assets/img/web/estudio-bocetos.webp 1100w" sizes="(max-width: 720px) 100vw, 45vw" alt="Bocetos de una fachada sobre la mesa de dibujo del estudio, con marcadores y cinta" width="1100" height="1650" loading="lazy">
+          <blockquote class="cita">
+            <p>«Una casa se diseña dos veces: una para el día y otra para la noche. Si la segunda sale bien, la primera casi siempre también.»</p>
+            <footer class="etiqueta">Sara Montoya · Arquitecta fundadora</footer>
+          </blockquote>
+        </figure>
+
+        <div class="recorrido revelar" data-recorrido>
+          <div class="recorrido-marco">
+            <img src="assets/img/web/residencia-1.jpg" srcset="assets/img/web/residencia-1-800.webp 800w, assets/img/web/residencia-1.webp 1300w" sizes="(max-width: 720px) 100vw, 50vw" width="1300" height="1950" alt="Sala en doble altura con sillas giratorias de madera y lámpara anular" data-recorrido-foto class="activa" loading="lazy">
+            <img src="assets/img/web/residencia-2.jpg" srcset="assets/img/web/residencia-2-800.webp 800w, assets/img/web/residencia-2.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1600" height="900" alt="Doble altura con ventanal al jardín y muro en madera" data-recorrido-foto loading="lazy">
+            <img src="assets/img/web/residencia-3.jpg" srcset="assets/img/web/residencia-3-800.webp 800w, assets/img/web/residencia-3.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1600" height="1067" alt="Terraza cubierta con piso de madera, pérgola y sofás claros" data-recorrido-foto loading="lazy">
+            <img src="assets/img/web/residencia-4.jpg" srcset="assets/img/web/residencia-4-800.webp 800w, assets/img/web/residencia-4.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1600" height="1067" alt="Comedor largo de madera junto a la cocina abierta" data-recorrido-foto loading="lazy">
+            <img src="assets/img/web/residencia-5.jpg" srcset="assets/img/web/residencia-5-800.webp 800w, assets/img/web/residencia-5.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1600" height="900" alt="Cocina con isla oscura abierta a un patio con palmas" data-recorrido-foto loading="lazy">
+            <img src="assets/img/web/residencia-6.jpg" srcset="assets/img/web/residencia-6-800.webp 800w, assets/img/web/residencia-6.webp 1300w" sizes="(max-width: 720px) 100vw, 50vw" width="1300" height="1625" alt="Lámparas de tubo de vidrio encendidas sobre el jardín" data-recorrido-foto loading="lazy">
+            <button class="recorrido-boton recorrido-anterior" type="button" data-recorrido-paso="-1" aria-label="Espacio anterior">←</button>
+            <button class="recorrido-boton recorrido-siguiente" type="button" data-recorrido-paso="1" aria-label="Espacio siguiente">→</button>
+          </div>
+          <div class="recorrido-pie">
+            <p class="etiqueta">Recorre la Residencia Arrayán</p>
+            <div class="recorrido-marcas" data-recorrido-marcas></div>
+            <p class="etiqueta recorrido-espacio" data-recorrido-nombre aria-live="polite">Sala · 1/6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Showroom: la luz se enciende donde pasa el cursor -->
+    <section class="showroom" id="showroom" data-linterna>
+      <img class="showroom-foto showroom-apagada" src="assets/img/web/materioteca.jpg" srcset="assets/img/web/materioteca-800.webp 800w, assets/img/web/materioteca.webp 2000w" sizes="100vw" width="2000" height="1333" alt="" loading="lazy">
+      <img class="showroom-foto showroom-encendida" src="assets/img/web/materioteca.jpg" srcset="assets/img/web/materioteca-800.webp 800w, assets/img/web/materioteca.webp 2000w" sizes="100vw" width="2000" height="1333" alt="Muestras de madera, piedra, metal y textil en tonos oscuros y dorados sobre la mesa del showroom" loading="lazy">
+      <div class="showroom-velo"></div>
+      <div class="showroom-texto">
+        <div class="seccion-cabeza">
+          <span class="luz"></span>
+          <p class="etiqueta">02 — Showroom</p>
+        </div>
+        <p class="showroom-frase revelar">
+          Ven a tocar los materiales antes de decidir: piedras, maderas y metales de tu próxima casa, sobre una misma mesa.
+        </p>
+        <div class="showroom-pie revelar">
+          <div class="showroom-placa">
+            <p class="etiqueta">Showroom y materioteca · Medellín · Con cita previa</p>
+            <p class="etiqueta prensa">Más de 300 muestras de proveedores nacionales</p>
+          </div>
+          <a class="boton boton-noche" href="#cita"><span>Agenda tu visita</span><span class="boton-flecha" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <p class="etiqueta showroom-ayuda" aria-hidden="true">Mueve el cursor para encender el espacio</p>
+    </section>
+
+    <!-- 8. Proyectos -->
+    <section class="proyectos" id="proyectos">
+      <div class="reticula">
+        <div class="seccion-cabeza proyectos-cabeza">
+          <span class="luz"></span>
+          <p class="etiqueta">03 — Proyectos</p>
+          <h2 class="titular revelar">Obra reciente</h2>
+          <p class="proyectos-intro revelar">Casas, interiores y espacios para recibir: cada uno pensado para cómo se vive de día y cómo se ve de noche.</p>
+        </div>
+
+        <div class="proyectos-lista">
+          <article class="proyecto p1 revelar">
+            <div class="proyecto-foto"><img src="assets/img/web/casa-mar.jpg" srcset="assets/img/web/casa-mar-800.webp 800w, assets/img/web/casa-mar.webp 1800w" sizes="(max-width: 720px) 100vw, 50vw" width="1800" height="1200" alt="Comedor de Casa Mar Adentro con ventanales de piso a techo hacia el mar y las palmas" loading="lazy"></div>
+            <span class="luz"></span>
+            <p class="etiqueta">01 · Interiorismo · Costa Caribe</p>
+            <h3>Casa Mar Adentro</h3>
+            <p>Un comedor abierto al mar: vidrio de piso a techo y una sola mesa larga para toda la familia.</p>
+          </article>
+          <article class="proyecto p2 revelar">
+            <div class="proyecto-foto"><img src="assets/img/web/residencia-1.jpg" srcset="assets/img/web/residencia-1-800.webp 800w, assets/img/web/residencia-1.webp 1300w" sizes="(max-width: 720px) 100vw, 50vw" width="1300" height="1950" alt="Sala en doble altura de la Residencia Arrayán" loading="lazy"></div>
+            <span class="luz"></span>
+            <p class="etiqueta">02 · Interiorismo y mobiliario</p>
+            <h3>Residencia Arrayán</h3>
+            <p>Maderas cálidas, una doble altura abierta al jardín y muebles hechos para la casa.</p>
+          </article>
+          <article class="proyecto p3 revelar">
+            <div class="proyecto-foto"><img src="assets/img/web/casa-nogal.jpg" srcset="assets/img/web/casa-nogal-800.webp 800w, assets/img/web/casa-nogal.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" width="1600" height="1067" alt="Zona social de Casa Nogal con un volumen de piedra oscura que guarda la chimenea" loading="lazy"></div>
+            <span class="luz"></span>
+            <p class="etiqueta">03 · Arquitectura e interiorismo</p>
+            <h3>Casa Nogal</h3>
+            <p>Un volumen de piedra oscura guarda la chimenea y ordena la sala, el comedor y el estudio.</p>
+          </article>
+          <!-- toda la tarjeta lleva a la página del proyecto -->
+          <a class="proyecto p4 proyecto-con-pagina revelar" href="proyectos/casa-alisio/">
+            <span class="proyecto-foto"><img src="assets/img/web/alisio-1.jpg" srcset="assets/img/web/alisio-1-800.webp 800w, assets/img/web/alisio-1.webp 1440w" sizes="(max-width: 720px) 100vw, 50vw" width="1440" height="1800" alt="Fachada de Casa Alisio con piscina y muro rojo" loading="lazy"></span>
+            <span class="luz"></span>
+            <span class="etiqueta">04 · Costa Caribe · 286 m²</span>
+            <h3>Casa Alisio</h3>
+            <p>Una casa blanca para vivir afuera: patio, piscina y una sala en doble altura por donde cruza la brisa.</p>
+            <span class="etiqueta proyecto-ver">Ver proyecto →</span>
+          </a>
+          <article class="proyecto p5 revelar">
+            <div class="proyecto-foto"><img src="assets/img/web/casa-ceiba.jpg" srcset="assets/img/web/casa-ceiba-800.webp 800w, assets/img/web/casa-ceiba.webp 1300w" sizes="(max-width: 720px) 100vw, 50vw" width="1300" height="1950" alt="Sala de Casa Ceiba con chimenea enchapada en travertino y madera oscura" loading="lazy"></div>
+            <span class="luz"></span>
+            <p class="etiqueta">05 · Interiorismo · Medellín</p>
+            <h3>Casa Ceiba</h3>
+            <p>Travertino, madera oscura y una chimenea que se enciende al caer la tarde.</p>
+          </article>
+          <aside class="proyecto p6 proyecto-indice revelar">
+            <p class="etiqueta">También en el portafolio</p>
+            <ul>
+              <li>Casa Yarumo</li>
+              <li>Casa Guayacán</li>
+              <li>Casa Quebrada Honda</li>
+              <li>Apartamento Mirasol</li>
+              <li>Hotel boutique en el Oriente antioqueño <span class="etiqueta">En obra</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8b. Testimonios -->
+    <section class="testimonios claro" id="clientes" aria-label="Testimonios">
+      <div class="reticula">
+        <div class="seccion-cabeza">
+          <span class="luz"></span>
+          <p class="etiqueta">04 — Clientes</p>
+        </div>
+        <blockquote class="testimonio-principal revelar">
+          <p>«Entendieron cómo vivíamos antes de dibujar una sola línea.»</p>
+          <footer class="etiqueta">Laura y Andrés · Casa Ceiba</footer>
+        </blockquote>
+        <a class="calificacion calificacion-segunda revelar" href="#cita">
+          <span class="calificacion-cifra">4,9<small>/5</small></span>
+          <span class="calificacion-texto">
+            <span class="calificacion-estrellas" aria-hidden="true">★★★★★</span>
+            <span class="etiqueta">Encuesta de cierre de obra · 31 clientes</span>
+          </span>
+        </a>
+        <div class="testimonios-lista">
+          <blockquote class="revelar">
+            <p>«Un solo equipo, un solo cronograma y ninguna sorpresa en la obra. Nos entregaron la casa con los muebles puestos.»</p>
+            <footer class="etiqueta">Juliana M. · Residencia Arrayán</footer>
+          </blockquote>
+          <blockquote class="revelar">
+            <p>«De noche la casa se ve todavía mejor que en los planos. La iluminación la pensaron desde el primer boceto.»</p>
+            <footer class="etiqueta">Camilo R. · Casa Nogal</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Cita inicial -->
+    <section class="cita-inicial" id="cita">
+      <img class="cita-fondo" src="assets/img/web/sala-oscura.jpg" srcset="assets/img/web/sala-oscura-800.webp 800w, assets/img/web/sala-oscura.webp 1300w" sizes="100vw" width="1300" height="1950" alt="" loading="lazy">
+      <div class="cita-velo"></div>
+      <div class="reticula cita-contenido">
+        <div class="seccion-cabeza">
+          <span class="luz"></span>
+          <p class="etiqueta">05 — Agenda tu cita</p>
+        </div>
+        <h2 class="display cita-titulo">
+          <span class="tenue">Cuéntanos de tu casa</span>
+          <span>y la empezamos a dibujar.</span>
+        </h2>
+        <form class="cita-tarjeta" data-cita>
+          <p class="cita-intro">En la primera cita revisamos el lote o el espacio, cómo quieres vivirlo, el alcance y los tiempos. Sin costo y sin compromiso.</p>
+          <div class="cita-campos">
+            <label><span class="etiqueta">Nombre</span><input name="nombre" autocomplete="name" required></label>
+            <label><span class="etiqueta">Ciudad del proyecto</span><input name="ciudad" autocomplete="address-level2"></label>
+            <label><span class="etiqueta">Tipo de proyecto</span>
+              <select name="tipo">
+                <option>Casa nueva</option>
+                <option>Remodelación</option>
+                <option>Interiorismo</option>
+                <option>Mobiliario</option>
+                <option>Espacio comercial</option>
+              </select>
+            </label>
+          </div>
+          <div class="cita-acciones">
+            <button class="boton boton-ancho" type="submit"><span>Escribir por WhatsApp</span><span class="boton-flecha" aria-hidden="true">→</span></button>
+            <a class="boton boton-ancho boton-linea" href="https://calendly.com/" target="_blank" rel="noopener"><span>Elige tu hora en Calendly</span><span class="boton-flecha" aria-hidden="true">→</span></a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Pie -->
+  <footer class="pie">
+    <div class="reticula">
+      <div class="pie-datos">
+        <div>
+          <p class="etiqueta pie-titulo">Showroom</p>
+          <p>Con cita previa<br>Medellín, Antioquia</p>
+        </div>
+        <div>
+          <p class="etiqueta pie-titulo">Contacto</p>
+          <p><a href="#cita">+57 300 000 0000</a><br><a href="#cita">hola@lumbre.example</a></p>
+        </div>
+        <div>
+          <p class="etiqueta pie-titulo">Redes</p>
+          <p><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a><br><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></p>
+        </div>
+      </div>
+      <span class="luz pie-luz"></span>
+      <p class="pie-nombre" aria-hidden="true">LUMBRE</p>
+      <div class="pie-legal">
+        <p class="etiqueta">Lumbre Arquitectura e Interiorismo es una marca ficticia · Fotos de Unsplash · © 2026</p>
+        <p class="etiqueta">Sitio de ejemplo hecho por <a href="https://16ballcreations.com">16 Ball Creations</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sitio.js" defer></script>
+</body>
+</html>

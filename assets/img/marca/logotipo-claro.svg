@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="Lumbre Arquitectura e Interiorismo (marca ficticia)">
+  <!-- Logotipo sobre piedra: la línea de luz pasa a nogal, sin brillo. -->
+  <text x="316" y="62" text-anchor="middle" fill="#090900"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="300"
+        font-size="52" letter-spacing="32">LUMBRE</text>
+  <rect x="60" y="84" width="480" height="1" fill="#544639"/>
+  <text x="302.1" y="114" text-anchor="middle" fill="#373638"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="200"
+        font-size="15" letter-spacing="4.2">ARQUITECTURA E INTERIORISMO</text>
+</svg>

@@ -1,0 +1,5 @@
+# Descargas originales de Unsplash (pesadas); las versiones para la web están en assets/img/web/
+fotos-originales/
+# Configuración local del navegador de vista previa
+.claude/launch.json
+__pycache__/
